@@ -1,8 +1,8 @@
 [alias]
 	# View abbreviated SHA, description, and history graph of the latest 20 commits
-	l = log --pretty=oneline -n 20 --graph --abbrev-commit
+	lg = log --pretty=oneline -n 20 --graph --abbrev-commit
 	# View the current working tree status using the short format
-	s = status -s
+	st = status -s
 	# Show the diff between the latest commit and the current state
 	d = !"git diff-index --quiet HEAD -- || clear; git --no-pager diff --patch-with-stat"
 	# `git di $number` shows the diff between the state `$number` revisions ago and the current state
@@ -10,7 +10,7 @@
 	# Pull in remote changes for the current repository and all its submodules
 	p = !"git pull; git submodule foreach git pull origin master"
 	# Clone a repository including all submodules
-	c = clone --recursive
+	cl = clone --recursive
 	# Commit all changes
 	ca = !git add -A && git commit -av
 	# Switch to a branch, creating it if necessary
@@ -35,6 +35,11 @@
 	# Treat spaces before tabs, lines that are indented with 8 or more spaces, and
 	# all kinds of trailing whitespace as an error
 	whitespace = space-before-tab,indent-with-non-tab,trailing-space
+	# Set default editor to Sublime Text
+        editor = subl -w
+
+[credential]
+        helper = osxkeychain
 
 [color]
 	# Use colors in Git commands that are capable of colored output when
@@ -73,3 +78,8 @@
 
 [push]
 	default = matching
+
+# My user info
+[user]
+        name = Dmitri Amariei
+        email = dmitri.amariei@gmail.com
