@@ -8,8 +8,8 @@ alias -- -="cd -"
 
 # Shortcuts
 alias dl="cd ~/Downloads"
-alias dt="cd ~/Desktop"
-alias c="cd ~/Code"
+alias desk="cd ~/Desktop"
+alias code="cd ~/Code"
 alias g="git"
 alias h="history"
 alias j="jobs"
@@ -18,6 +18,7 @@ alias m="mate ."
 alias s="subl ."
 alias o="open"
 alias oo="open ."
+alias cl="clear"
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
@@ -52,7 +53,7 @@ alias week='date +%V'
 alias timer='echo "Timer started. Stop with Ctrl-D." && date && time cat && date'
 
 # Get OS X Software Updates, and update installed Ruby gems, Homebrew, npm, and their installed packages
-alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; npm update npm -g; npm update -g'
+alias update='sudo softwareupdate -i -a;sudo brew update;sudo brew upgrade;sudo brew cleanup;sudo npm update npm -g;sudo npm update -g'
 
 # IP addresses
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
